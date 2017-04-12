@@ -2,26 +2,34 @@ package ru.habrahabr.sergiosergio.chapter_1;
 
 public abstract class Duck {
 
-	FlyBehavior flyBehavior;
-	QuackBehavior quackBehavior;
+    FlyBehavior flyBehavior;
+    QuackBehavior quackBehavior;
 
-	public Duck() {
+    public Duck() {
 
-	}
+    }
 
-	public abstract void display();
+    public void setFlyBehavior(FlyBehavior flyBehavior) {
+	this.flyBehavior = flyBehavior;
+    }
 
-	public void performQuack() {
-		quackBehavior.quack();
-	}
+    public void setQuackBehavior(QuackBehavior quackBehavior) {
+	this.quackBehavior = quackBehavior;
+    }
 
-	public void perfoformFly() {
-		flyBehavior.fly();
-	}
+    public abstract void display();
 
-	public void swim() {
+    public void performQuack() {
+	quackBehavior.quack();
+    }
 
-		System.out.println("All ducks float, even deckoys!");
-	}
+    public void perfoformFly() {
+	flyBehavior.fly();
+    }
+
+    public void swim() {
+
+	System.out.println("All ducks float, even deckoys!");
+    }
 
 }
